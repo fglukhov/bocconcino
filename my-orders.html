@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Google Tag Manager-->
+    <script>
+      (function (w, d, s, l, i) {
+      	w[l] = w[l] || [];
+      	w[l].push({
+      		'gtm.start':
+      				new Date().getTime(), event: 'gtm.js'
+      	});
+      	var f = d.getElementsByTagName(s)[0],
+      			j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+      	j.async = true;
+      	j.src =
+      			'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      	f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-N9WGRMV');
+    </script>
+    <!-- End Google Tag Manager-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Корзина</title>
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:url" content="https://www.bocconcino.ru/basket/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Корзина">
+    <meta property="og:description" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="http://bocconcino.ru/bitrix/js/main/core/css/core.css?15670314603963" type="text/css" rel="stylesheet">
+    <link href="http://bocconcino.ru/bitrix/js/ui/fonts/opensans/ui.font.opensans.css?15670314742003" type="text/css" rel="stylesheet">
+    <link href="http://bocconcino.ru/bitrix/js/main/core/css/core_popup.css?156703146017731" type="text/css" rel="stylesheet">
+    <link href="bitrix/templates/bocconcino/css/circe.css" type="text/css" data-template-style="true" rel="stylesheet">
+    <link href="bitrix/templates/bocconcino/css/bocconcino-font.css" type="text/css" data-template-style="true" rel="stylesheet">
+    <link href="http://bocconcino.ru/bitrix/templates/bocconcino/css/bootstrap.min.css?1582753319144881" type="text/css" data-template-style="true" rel="stylesheet">
+    <link href="bitrix/templates/bocconcino/style.css" type="text/css" data-template-style="true" rel="stylesheet">
+    <link href="http://bocconcino.ru/bitrix/templates/bocconcino/css/slick.css?15670314511729" type="text/css" data-template-style="true" rel="stylesheet">
+    <link href="http://bocconcino.ru/bitrix/templates/bocconcino/css/slick-theme.css?15670314512688" type="text/css" data-template-style="true" rel="stylesheet">
+    <link href="http://bocconcino.ru/bitrix/templates/bocconcino/css/skitter.css?156703145114390" type="text/css" data-template-style="true" rel="stylesheet">
+    <link href="http://bocconcino.ru/bitrix/templates/bocconcino/css/bootstrap-select.min.css?156703145110717" type="text/css" data-template-style="true" rel="stylesheet">
+    <link href="http://bocconcino.ru/bitrix/templates/bocconcino/css/photoswipe.css?15670314514137" type="text/css" data-template-style="true" rel="stylesheet">
+    <link href="http://bocconcino.ru/bitrix/templates/bocconcino/css/photoswipe-default-skin.css?156703145111647" type="text/css" data-template-style="true" rel="stylesheet">
+    <link href="http://bocconcino.ru/bitrix/templates/bocconcino/css/easyzoom.css?1567031451958" type="text/css" data-template-style="true" rel="stylesheet">
+    <link href="http://bocconcino.ru/bitrix/templates/bocconcino/js/fancybox/jquery.fancybox_new.css?156703145117412" type="text/css" data-template-style="true" rel="stylesheet">
+    <link href="http://bocconcino.ru/bitrix/templates/bocconcino/css/responsive.css?160265583938227" type="text/css" data-template-style="true" rel="stylesheet">
+    <link href="http://bocconcino.ru/bitrix/templates/bocconcino/css/bootstrap-datepicker3.min.css?155836961021100" type="text/css" data-template-style="true" rel="stylesheet">
+    <script type="text/javascript">
+      if (!window.BX) window.BX = {};if (!window.BX.message) window.BX.message = function (mess) {
+      	if (typeof mess == 'object') for (var i in mess) BX.message[i] = mess[i];
+      	return true;
+      };
+    </script>
+    <script type="text/javascript">
+      (window.BX || top.BX).message({
+      	'JS_CORE_LOADING': 'Загрузка...',
+      	'JS_CORE_NO_DATA': '- Нет данных -',
+      	'JS_CORE_WINDOW_CLOSE': 'Закрыть',
+      	'JS_CORE_WINDOW_EXPAND': 'Развернуть',
+      	'JS_CORE_WINDOW_NARROW': 'Свернуть в окно',
+      	'JS_CORE_WINDOW_SAVE': 'Сохранить',
+      	'JS_CORE_WINDOW_CANCEL': 'Отменить',
+      	'JS_CORE_WINDOW_CONTINUE': 'Продолжить',
+      	'JS_CORE_H': 'ч',
+      	'JS_CORE_M': 'м',
+      	'JS_CORE_S': 'с',
+      	'JSADM_AI_HIDE_EXTRA': 'Скрыть лишние',
+      	'JSADM_AI_ALL_NOTIF': 'Показать все',
+      	'JSADM_AUTH_REQ': 'Требуется авторизация!',
+      	'JS_CORE_WINDOW_AUTH': 'Войти',
+      	'JS_CORE_IMAGE_FULL': 'Полный размер'
+      });
+    </script>
+    <script type="text/javascript">
+      (window.BX || top.BX).message({
+      	'LANGUAGE_ID': 'ru',
+      	'FORMAT_DATE': 'DD.MM.YYYY',
+      	'FORMAT_DATETIME': 'DD.MM.YYYY HH:MI:SS',
+      	'COOKIE_PREFIX': 'BITRIX_SM',
+      	'SERVER_TZ_OFFSET': '10800',
+      	'SITE_ID': 's1',
+      	'SITE_DIR': '/',
+      	'USER_ID': '',
+      	'SERVER_TIME': '1603604523',
+      	'USER_TZ_OFFSET': '0',
+      	'USER_TZ_AUTO': 'Y',
+      	'bitrix_sessid': '49b1b5cff44ea74e49c3891e29a03a39'
+      });
+    </script>
+    <script type="text/javascript" src="http://bocconcino.ru/bitrix/cache/js/s1/bocconcino/kernel_main/kernel_main_v1.js?1598889196476852"></script>
+    <script type="text/javascript" src="http://bocconcino.ru/bitrix/cache/js/s1/bocconcino/kernel_main_polyfill_promise/kernel_main_polyfill_promise_v1.js?15988891848526"></script>
+    <script type="text/javascript" src="http://bocconcino.ru/bitrix/js/main/loadext/loadext.js?15670314602917"></script>
+    <script type="text/javascript" src="http://bocconcino.ru/bitrix/js/main/loadext/extension.js?15670314602895"></script>
+    <script type="text/javascript">BX.setJSList(['http://bocconcino.ru/bitrix/js/main/core/core.js', 'http://bocconcino.ru/bitrix/js/main/core/core_promise.js', 'http://bocconcino.ru/bitrix/js/main/core/core_ajax.js', 'http://bocconcino.ru/bitrix/js/main/core/core_popup.js', 'http://bocconcino.ru/bitrix/js/main/json/json2.min.js', 'http://bocconcino.ru/bitrix/js/main/core/core_ls.js', 'http://bocconcino.ru/bitrix/js/main/session.js', 'http://bocconcino.ru/bitrix/js/main/core/core_window.js', 'http://bocconcino.ru/bitrix/js/main/date/main.date.js', 'http://bocconcino.ru/bitrix/js/main/core/core_date.js', 'http://bocconcino.ru/bitrix/js/main/utils.js', 'http://bocconcino.ru/bitrix/js/main/core/core_fx.js', 'http://bocconcino.ru/bitrix/js/main/polyfill/promise/js/promise.js', 'http://bocconcino.ru/bitrix/templates/bocconcino/js/jquery.min.js']);</script>
+    <script type="text/javascript">
+      (function () {
+      	"use strict";
+      	var counter = function () {
+      		var cookie = (function (name) {
+      			var parts = ("; " + document.cookie).split("; " + name + "=");
+      			if (parts.length == 2) {
+      				try {
+      					return JSON.parse(decodeURIComponent(parts.pop().split(";").shift()));
+      				} catch (e) {
+      				}
+      			}
+      		})("BITRIX_CONVERSION_CONTEXT_s1");
+      		if (cookie && cookie.EXPIRE >= BX.message("SERVER_TIME"))
+      			return;
+      		var request = new XMLHttpRequest();
+      		request.open("POST", "http://bocconcino.ru/bitrix/tools/conversion/ajax_counter.php", true);
+      		request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      		request.send(
+      				"SITE_ID=" + encodeURIComponent("s1") +
+      				"&sessid=" + encodeURIComponent(BX.bitrix_sessid()) +
+      				"&HTTP_REFERER=" + encodeURIComponent(document.referrer)
+      		);
+      	};
+      	if (window.frameRequestStart === true)
+      		BX.addCustomEvent("onFrameDataReceived", counter);
+      	else
+      		BX.ready(counter);
+      })();
+    </script>
+    <script type="text/javascript" src="http://bocconcino.ru/bitrix/cache/js/s1/bocconcino/template_775168743853eb2e631a1386d501ba57/template_775168743853eb2e631a1386d501ba57_v1.js?159888918497446"></script>
+    <script type="text/javascript">
+      var _ba = _ba || []; _ba.push(["aid", "0ab4a60f4e2622f900990734ffb80d9a"]); _ba.push(["host", "www.bocconcino.ru"]); (function () {
+      	var ba = document.createElement("script");
+      	ba.type = "text/javascript";
+      	ba.async = true;
+      	ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";
+      	var s = document.getElementsByTagName("script")[0];
+      	s.parentNode.insertBefore(ba, s);
+      })();
+    </script>
+    <script>
+      new Image().src = 'https://nn.bocconcino.ruhttp://bocconcino.ru/bitrix/spread.php?s=QklUUklYX1NNX0FCVEVTVF9zMQEBMTYzNDcwODUyMgEvAQEBAg%3D%3D&k=ebbc71ccb39c66cd8171c80ef73903da';
+      
+    </script>
+    <!-- Стили и скрипты личного кабинета-->
+    <link href="css/bootstrap-select.min.css" type="text/css" rel="stylesheet">
+    <link href="css/account.css" type="text/css" rel="stylesheet">
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/additional-methods.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/account.js"></script>
+    <!-- Стили и скрипты личного кабинета END-->
+  </head>
+  <body class="cart-page">
+    <!-- Google Tag Manager (noscript)-->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N9WGRMV" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript)-->
+    <div id="panel"></div>
+    <nav class="navbar navbar_delivery navbar-custom navbar-expand-md sticky">
+      <div class="navbar_top">
+        <div class="container">
+          <div class="row">
+            <div class="navbar-top_wrapper">
+              <div class="navbar-top_switch"><a class="navbar-top_switch-action btn_medium" href="/restaraunt/"><img src="http://bocconcino.ru/bitrix/templates/bocconcino/img/btn_rest.png">                                    Ресторан</a>
+                <div class="navbar-actions_lang">
+                  <ul class="less_ul">
+                    <li class="navbar-lang_item active" data-lang="ru"><a href="/basket/">ru</a></li>
+                    <li class="navbar-lang_item" data-lang="en"><a href="/en/basket/">en</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="navbar-top_logo"><a href="/delivery/"><img class="logo" src="http://bocconcino.ru/bitrix/templates/bocconcino/img/logo.png"></a></div>
+              <div class="topfoot_action">
+                <div class="topfoot-actions_phone">
+                  <div class="topfoot-actions_number"><span class="callibri_phone_1"><a href="tel:+79299291929">+7 (929) 929-1-929</a></span>
+                    <button class="topfoot-actions_callback" data-toggle="modal" data-target="#modalTableCallback">Обратный звонок</button>
+                  </div>
+                </div>
+                <div class="navbar_scart">
+                  <div class="navbar-scart_search navbar-scart_action">
+                    <button class="navbar_scart--btn_search"><i class="icon icon-icomoon-2"></i></button>
+                    <div class="navbar-scart_search-inner">
+                      <form action="/search/index.php">
+                        <input type="text" name="q" value="" size="15" maxlength="50" placeholder="Поиск по сайту">
+                        <button class="navbar_scart--btn_search" name="s" type="submit"><i class="icon icon-icomoon-2"></i></button>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="navbar-scart_search navbar-scart_action"><a class="navbar_scart--btn_account" href="#" data-toggle="modal" data-target="#loginModal"></a></div>
+                  <div class="navbar-scart_cart navbar-scart_action"><a class="navbar_scart--btn_cart" href="/basket/"><i class="icon icon-icomoon-5"></i></a><span id="carVal">0</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-menu">
+        <button class="navbar-toggler collapsed" data-toggle="collapse" href="#menu-collapsable" role="button" aria-expanded="false" type="button"><span class="navbar-toggler-icon"></span><span class="navbar-toggler-text"> Меню</span></button>
+        <div class="navbar-header container">
+          <div class="navbar-collapse collapse" id="menu-collapsable">
+            <ul class="nav navbar-nav">
+              <li><a href="/about/">О bocconcino</a></li>
+              <li><a href="/delivery_terms/">Условия доставки</a></li>
+              <li><a href="/delivery_menu/">Меню</a></li>
+              <li><a href="/special/">Акции</a></li>
+              <li><a href="/contacts/">Контакты</a></li>
+            </ul>
+            <div class="d-md-none navbar-nav_additional">
+              <div class="navbar-top_switch"><a class="navbar-top_switch-action btn_light" href="/restaraunt/"><img src="http://bocconcino.ru/bitrix/templates/bocconcino/img/btn_rest.png">                                    Ресторан</a></div>
+              <div class="navbar-actions_lang">
+                <ul class="less_ul">
+                  <li class="navbar-lang_item active" data-lang="ru"><a href="/basket/">ru</a></li>
+                  <li class="navbar-lang_item" data-lang="en"><a href="/en/basket/">en</a></li>
+                </ul>
+              </div>
+              <div class="navbar_app"><a href="https://itunes.apple.com/ru/app/bocconcino/id458064466?mt=8"><span> Скачайте приложение</span><img src="http://bocconcino.ru/bitrix/templates/bocconcino/img/app.png"></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="page_header" style="background-image: url(images/account-header-bg.jpg)">
+      <ul class="less_ul page_breadcumb">
+        <li><a href="/">Главная</a></li>
+        <li>Кабинет</li>
+      </ul>
+      <h1 class="page_title">Мой кабинет</h1>
+    </section>
+    <section class="section-account">
+      <div class="container">
+        <div class="account-nav">
+          <div class="account-nav-col"><a class="account-nav-link" href="#"><span>Мои данные</span></a></div>
+          <div class="account-nav-col"><a class="account-nav-link active" href="#"><span>Мои заказы</span></a></div>
+          <div class="account-nav-col"><a class="btn-account-logout" href="#"></a></div>
+        </div>
+        <div class="orders-wrapper">
+          <div class="orders-list">
+            <div class="orders-item">
+              <div class="orders-item-pic"><img src="images/ico-order.png"></div>
+              <div class="orders-item-number">
+                <p>123456</p>
+              </div>
+              <div class="orders-item-date">
+                <p>20.12.2020</p>
+              </div>
+              <div class="orders-item-address">
+                <p>Москва, ул. Нагорная, 15, корп. 4, кв. 47</p>
+              </div>
+              <div class="orders-item-goods">
+                <p><a href="#" data-toggle="modal" data-target="#orderModal">5&nbsp;товаров</a></p>
+              </div>
+              <div class="orders-item-price">
+                <p>15&nbsp;500&nbsp;Р</p>
+              </div>
+              <div class="orders-item-shipping">
+                <p>Доставка</p>
+              </div>
+              <div class="orders-item-repeat">
+                <div class="btn-repeat"></div>
+              </div>
+            </div>
+            <div class="orders-item">
+              <div class="orders-item-pic"><img src="images/ico-order.png"></div>
+              <div class="orders-item-number">
+                <p>123456</p>
+              </div>
+              <div class="orders-item-date">
+                <p>20.12.2020</p>
+              </div>
+              <div class="orders-item-address">
+                <p>Москва, ул. Нагорная, 15, корп. 4, кв. 47</p>
+              </div>
+              <div class="orders-item-goods">
+                <p><a href="#" data-toggle="modal" data-target="#orderModal">5&nbsp;товаров</a></p>
+              </div>
+              <div class="orders-item-price">
+                <p>15&nbsp;500&nbsp;Р</p>
+              </div>
+              <div class="orders-item-shipping">
+                <p>Cамовывоз</p>
+              </div>
+              <div class="orders-item-repeat">
+                <div class="btn-repeat"></div>
+              </div>
+            </div>
+            <div class="orders-item">
+              <div class="orders-item-pic"><img src="images/ico-order.png"></div>
+              <div class="orders-item-number">
+                <p>123456</p>
+              </div>
+              <div class="orders-item-date">
+                <p>20.12.2020</p>
+              </div>
+              <div class="orders-item-address">
+                <p>Москва, ул. Нагорная, 15, корп. 4, кв. 47</p>
+              </div>
+              <div class="orders-item-goods">
+                <p><a href="#" data-toggle="modal" data-target="#orderModal">5&nbsp;товаров</a></p>
+              </div>
+              <div class="orders-item-price">
+                <p>15&nbsp;500&nbsp;Р</p>
+              </div>
+              <div class="orders-item-shipping">
+                <p>Доставка</p>
+              </div>
+              <div class="orders-item-repeat">
+                <div class="btn-repeat"></div>
+              </div>
+            </div>
+            <div class="orders-item">
+              <div class="orders-item-pic"><img src="images/ico-order.png"></div>
+              <div class="orders-item-number">
+                <p>123456</p>
+              </div>
+              <div class="orders-item-date">
+                <p>20.12.2020</p>
+              </div>
+              <div class="orders-item-address">
+                <p>Москва, ул. Нагорная, 15, корп. 4, кв. 47</p>
+              </div>
+              <div class="orders-item-goods">
+                <p><a href="#" data-toggle="modal" data-target="#orderModal">5&nbsp;товаров</a></p>
+              </div>
+              <div class="orders-item-price">
+                <p>15&nbsp;500&nbsp;Р</p>
+              </div>
+              <div class="orders-item-shipping">
+                <p>Cамовывоз</p>
+              </div>
+              <div class="orders-item-repeat">
+                <div class="btn-repeat"></div>
+              </div>
+            </div>
+            <div class="orders-item">
+              <div class="orders-item-pic"><img src="images/ico-order.png"></div>
+              <div class="orders-item-number">
+                <p>123456</p>
+              </div>
+              <div class="orders-item-date">
+                <p>20.12.2020</p>
+              </div>
+              <div class="orders-item-address">
+                <p>Москва, ул. Нагорная, 15, корп. 4, кв. 47</p>
+              </div>
+              <div class="orders-item-goods">
+                <p><a href="#" data-toggle="modal" data-target="#orderModal">5&nbsp;товаров</a></p>
+              </div>
+              <div class="orders-item-price">
+                <p>15&nbsp;500&nbsp;Р</p>
+              </div>
+              <div class="orders-item-shipping">
+                <p>Доставка</p>
+              </div>
+              <div class="orders-item-repeat">
+                <div class="btn-repeat"></div>
+              </div>
+            </div>
+            <div class="orders-item">
+              <div class="orders-item-pic"><img src="images/ico-order.png"></div>
+              <div class="orders-item-number">
+                <p>123456</p>
+              </div>
+              <div class="orders-item-date">
+                <p>20.12.2020</p>
+              </div>
+              <div class="orders-item-address">
+                <p>Москва, ул. Нагорная, 15, корп. 4, кв. 47</p>
+              </div>
+              <div class="orders-item-goods">
+                <p><a href="#" data-toggle="modal" data-target="#orderModal">5&nbsp;товаров</a></p>
+              </div>
+              <div class="orders-item-price">
+                <p>15&nbsp;500&nbsp;Р</p>
+              </div>
+              <div class="orders-item-shipping">
+                <p>Cамовывоз</p>
+              </div>
+              <div class="orders-item-repeat">
+                <div class="btn-repeat"></div>
+              </div>
+            </div><a class="show-more" href="load/more-orders.html">
+              <div class="show-more-ico"></div>
+              <div class="show-more-text">Показать еще</div></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer_wrap">
+            <div class="footer_socials call_socials">
+              <div class="blck-app-soc">
+                <ul class="less_ul">
+                  <li><a href="https://www.facebook.com/pages/Bocconcino-Moscow/173038512752736"><i class="icon icon-icomoon-15"></i></a></li>
+                  <li><a href="https://www.instagram.com/bocconcinomoscow/"><i class="icon icon-icomoon"></i></a></li>
+                  <li><a href="https://www.tripadvisor.ru/Restaurant_Review-g298484-d1119669-Reviews-Bocconcino-Moscow_Central_Russia.html"><i class="icon icon-icomoon-13"></i></a></li>
+                </ul>
+                <div class="navbar_app"><a href="https://itunes.apple.com/ru/app/bocconcino/id458064466?mt=8"><img src="http://bocconcino.ru/bitrix/templates/bocconcino/img/app.png"></a></div>
+              </div>
+            </div>
+            <div class="footer-partners">
+              <div class="h3">Наши партнеры</div>
+              <div class="custom-slider footer-partners-slider">
+                <div class="partner_item"><img src="http://bocconcino.ru/upload/iblock/36d/36def9d3d37be96e1c9bdec99e4c3ee1.png"></div>
+                <div class="partner_item"><img src="http://bocconcino.ru/upload/iblock/ad7/ad75d66b02d67d4224cf16c9fd9c3719.png"></div>
+                <div class="partner_item"><img src="http://bocconcino.ru/upload/iblock/a9b/a9b26246d441ea67a85b562bf39c573b.png"></div>
+                <div class="partner_item"><img src="http://bocconcino.ru/upload/iblock/15f/15fd98684f280ce3c65dc9afe25ad08f.png"></div>
+                <div class="partner_item"><img src="http://bocconcino.ru/upload/iblock/638/638d9ba7aa7432af5c61f97ff2dab4d3.png"></div>
+                <div class="partner_item"><img src="http://bocconcino.ru/upload/iblock/1b5/1b5e6dfd243a05c97737c227d8aba260.png"></div>
+                <div class="partner_item"><img src="http://bocconcino.ru/upload/iblock/e5a/e5aa767769aa6980e07f5a6362f61fb3.png"></div>
+                <div class="partner_item"><img src="http://bocconcino.ru/upload/iblock/ac3/ac372085638dfe7f36ce9914810c47a6.png"></div>
+                <div class="partner_item"><img src="http://bocconcino.ru/upload/iblock/268/268d343df097fd12473aaf76828249e3.png"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="modal fade custom-modal order-modal" id="orderModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="icon icon-icomoon-12"></i></button>
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="order-modal-header">
+            <div class="order-modal-ico"><img src="images/ico-order.png"></div>
+            <h3>Заказ № 123456</h3>
+            <div class="order-modal-date">20.12.2020</div>
+          </div>
+          <div class="order-modal-content">
+            <div class="order-goods-list-wrapper">
+              <div class="order-goods-list">
+                <div class="order-goods-item">
+                  <div class="order-goods-item-pic"><img src="files/order-good-1.jpg"></div>
+                  <div class="order-goods-item-descr">
+                    <h3>Фирменная пицца</h3>
+                    <p>Пармская ветчина, страккино, моцарелла, помидоры</p>
+                    <p>485 г</p>
+                  </div>
+                  <div class="order-goods-item-count">
+                    <p>1 <span>шт.</span></p>
+                  </div>
+                  <div class="order-goods-item-price">
+                    <p>1&nbsp;920 Р</p>
+                  </div>
+                </div>
+                <div class="order-goods-item">
+                  <div class="order-goods-item-pic"><img src="files/order-good-2.jpg"></div>
+                  <div class="order-goods-item-descr">
+                    <h3>Пицца с шампиньонами</h3>
+                    <p>Пармская ветчина, моцарелла, томатный соус</p>
+                    <p>485 г</p>
+                  </div>
+                  <div class="order-goods-item-count">
+                    <p>1 <span>шт.</span></p>
+                  </div>
+                  <div class="order-goods-item-price">
+                    <p>1&nbsp;920 Р</p>
+                  </div>
+                </div>
+                <div class="order-goods-item">
+                  <div class="order-goods-item-pic"><img src="files/order-good-1.jpg"></div>
+                  <div class="order-goods-item-descr">
+                    <h3>Фирменная пицца</h3>
+                    <p>Пармская ветчина, страккино, моцарелла, помидоры</p>
+                    <p>485 г</p>
+                  </div>
+                  <div class="order-goods-item-count">
+                    <p>1 <span>шт.</span></p>
+                  </div>
+                  <div class="order-goods-item-price">
+                    <p>1&nbsp;920 Р</p>
+                  </div>
+                </div>
+                <div class="order-goods-item">
+                  <div class="order-goods-item-pic"><img src="files/order-good-2.jpg"></div>
+                  <div class="order-goods-item-descr">
+                    <h3>Пицца с шампиньонами</h3>
+                    <p>Пармская ветчина, моцарелла, томатный соус</p>
+                    <p>485 г</p>
+                  </div>
+                  <div class="order-goods-item-count">
+                    <p>1 <span>шт.</span></p>
+                  </div>
+                  <div class="order-goods-item-price">
+                    <p>1&nbsp;920 Р</p>
+                  </div>
+                </div>
+                <div class="order-goods-item">
+                  <div class="order-goods-item-pic"><img src="files/order-good-1.jpg"></div>
+                  <div class="order-goods-item-descr">
+                    <h3>Фирменная пицца</h3>
+                    <p>Пармская ветчина, страккино, моцарелла, помидоры</p>
+                    <p>485 г</p>
+                  </div>
+                  <div class="order-goods-item-count">
+                    <p>1 <span>шт.</span></p>
+                  </div>
+                  <div class="order-goods-item-price">
+                    <p>1&nbsp;920 Р</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-modal-footer">
+            <div class="order-modal-total">
+              <div class="order-modal-total-ttl">Стоимость заказа</div>
+              <div class="order-modal-total-price">1 380 Р</div>
+            </div>
+            <div class="order-modal-button">
+              <div class="btn-order-repeat"><span>Повторить заказ</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade custom-modal custom-modal--reserv" id="modalTableReserv" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="icon icon-icomoon-12"></i></button>
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="custom-modal_wrapper reservation_wrap">
+            <h3> Забронировать стол в bocconcino</h3>
+            <form action="#">
+              <!-- Скрытое поле для извлечения yclid-->
+              <input type="hidden" name="yclid_field" value="">
+              <input type="hidden" value="RESERV" name="TEMPL">
+              <div class="custom_form-control col-md-6" data-err-message="Выберите ресторан">
+                <select class="bselect" name="location">
+                  <option value="">Выберите ресторан Bocconcino</option>
+                  <option value="aviapark">Авиапарк</option>
+                  <option value="strastnoi">Страстной бульвар</option>
+                  <option value="patriarsh">Патриаршие пруды</option>
+                  <option value="lenin-shosse">Ленинградское шоссе</option>
+                  <option value="kutuzovski">Кутузовский проспект</option>
+                  <option value="leninski">Ленинский проспект</option>
+                  <option value="lesnaya">ДЕПО Лесная</option>
+                </select>
+              </div>
+              <div class="custom_form-control col-md-6" data-err-message="Заполните поле">
+                <input class="placeholder_white" type="text" name="guests" placeholder="Кол-во человек">
+              </div>
+              <div class="custom_form-control col-md-6" data-err-message="Заполните поле">
+                <input class="placeholder_white datepicker-here" name="date" type="text" placeholder="ДД / ММ / ГГГГ" data-date-format="dd / mm / yyyy">
+              </div>
+              <div class="custom_form-control col-md-6" data-err-message="Заполните поле">
+                <select class="bselect" name="time">
+                  <option value="">Часы</option>
+                  <option value="11:00">11:00</option>
+                  <option value="11:30">11:30</option>
+                  <option value="12:00">12:00</option>
+                  <option value="12:30">12:30</option>
+                  <option value="13:00">13:00</option>
+                  <option value="13:30">13:30</option>
+                  <option value="14:00">14:00</option>
+                  <option value="14:30">14:30</option>
+                  <option value="15:00">15:00</option>
+                  <option value="15:30">15:30</option>
+                  <option value="16:00">16:00</option>
+                  <option value="16:30">16:30</option>
+                  <option value="17:00">17:00</option>
+                  <option value="17:30">17:30</option>
+                  <option value="18:00">18:00</option>
+                  <option value="18:30">18:30</option>
+                  <option value="19:00">19:00</option>
+                  <option value="19:30">19:30</option>
+                  <option value="20:00">20:00</option>
+                  <option value="20:30">20:30</option>
+                  <option value="21:00">21:00</option>
+                  <option value="21:30">21:30</option>
+                  <option value="22:00">22:00</option>
+                  <option value="22:30">22:30</option>
+                  <option value="23:00">23:00</option>
+                  <option value="23:30">23:30</option>
+                </select>
+              </div>
+              <div class="custom_form-control col-md-6" data-err-message="Заполните поле">
+                <input class="placeholder_white" type="text" name="firstname" placeholder="Ваше имя">
+              </div>
+              <div class="custom_form-control col-md-6" data-err-message="Заполните поле">
+                <input class="placeholder_white phone-mask" name="phonenumber" type="text" placeholder="+ 7 ( ХХХ ) ХХХ - ХХ - ХХ">
+              </div>
+              <button class="reservation_send btn_light" type="submit"> Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade custom-modal custom-modal--newsletter" id="modalTableNewsletter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="icon icon-icomoon-12"></i></button>
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="custom-modal_wrapper reservation_wrap">
+            <h3>Будте в курсе всех новостей<span> Оставьте почту, чтобы быть в курсе всех  наших акций и предложений</span></h3>
+            <form action="#">
+              <!-- Скрытое поле для извлечения yclid-->
+              <input type="hidden" name="yclid_field" value="">
+              <input type="hidden" value="SUBSCRIBE" name="TEMPL">
+              <div class="custom_form-control col-md-6" data-err-message="Заполните поле">
+                <input class="placeholder_white" type="text" name="email" placeholder="Ваш e-mail">
+              </div>
+              <div class="custom_form-control col-md-6">
+                <button class="custom-modal--newsletter-send btn_light" type="submit"> Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade custom-modal custom-modal--newsletter" id="modalTableCallback" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="icon icon-icomoon-12"></i></button>
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="custom-modal_wrapper reservation_wrap">
+            <h3>Заказ обратного звонка</h3>
+            <form action="#">
+              <!-- Скрытое поле для извлечения yclid-->
+              <input type="hidden" name="yclid_field" value="">
+              <input type="hidden" value="CALL" name="TEMPL">
+              <div class="custom_form-control col-md-6" data-err-message="Заполните поле">
+                <input class="placeholder_white" type="text" name="firstname" placeholder="Ваше имя">
+              </div>
+              <div class="custom_form-control col-md-6" data-err-message="Заполните поле">
+                <input class="placeholder_white phone-mask" name="phonenumber" type="text" placeholder="+ 7 ( ХХХ ) ХХХ - ХХ - ХХ">
+              </div>
+              <button class="reservation_send btn_light" type="submit"> Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade custom-modal custom-modal--newsletter" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="icon icon-icomoon-12"></i></button>
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="custom-modal_wrapper reservation_wrap">
+            <h3>Войти</h3>
+            <div class="form-alt modal-form">
+              <form action="#">
+                <!-- Скрытое поле для извлечения yclid-->
+                <input type="hidden" name="yclid_field" value="">
+                <input type="hidden" value="CALL" name="TEMPL">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="placeholder" for="login_name">Логин <span class="req">*</span></label>
+                    <input type="text" name="login_name" id="login_name" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="placeholder" for="login_pass">Пароль <span class="req">*</span></label>
+                    <input type="password" name="login_pass" id="login_pass" required>
+                  </div>
+                </div>
+                <div class="forgot-wrapper"><a href="#" data-toggle="modal" data-target="#forgotModal">Я не помню пароль</a></div>
+                <button class="reservation_send btn_light" type="submit"> Войти</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade custom-modal custom-modal--newsletter" id="forgotModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="icon icon-icomoon-12"></i></button>
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="custom-modal_wrapper reservation_wrap">
+            <h3>Восстановить пароль</h3>
+            <div class="restore-info">
+              <p>Инструкция по восстановлению пароля будет выслана на ваш e-mail</p>
+            </div>
+            <div class="form-alt modal-form">
+              <form action="#">
+                <!-- Скрытое поле для извлечения yclid-->
+                <input type="hidden" name="yclid_field" value="">
+                <input type="hidden" value="CALL" name="TEMPL">
+                <div class="col-md-6 offset-md-3">
+                  <div class="form-group">
+                    <label class="placeholder" for="forgot_email">Ваш e-mail <span class="req">*</span></label>
+                    <input type="email" name="forgot_email" id="forgot_email" required>
+                  </div>
+                </div>
+                <button class="reservation_send btn_light" type="submit"> Отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade custom-modal custom-modal--manager" id="modalRequestManager" tabindex="-1" role="dialog" aria-hidden="true">
+      <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="icon icon-icomoon-12"></i></button>
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="custom-modal_wrapper reservation_wrap">
+            <h3> Оставить заявку</h3>
+            <form action="#">
+              <!-- Скрытое поле для извлечения yclid-->
+              <input type="hidden" name="yclid_field" value="">
+              <input type="hidden" value="BANKET_MODAL" name="TEMPL">
+              <input type="hidden" value="" name="location">
+              <div class="custom_form-control col-md-6" data-err-message="Заполните поле">
+                <input class="placeholder_white" type="text" name="firstname" placeholder="Ваше имя">
+              </div>
+              <div class="custom_form-control col-md-6" data-err-message="Заполните поле">
+                <input class="placeholder_white phone-mask" name="phonenumber" type="text" placeholder="+ 7 ( ХХХ ) ХХХ - ХХ - ХХ">
+              </div>
+              <div class="custom_form-control col-md-6" data-err-message="Заполните поле">
+                <input class="placeholder_white" type="text" name="guests" placeholder="Кол-во человек">
+              </div>
+              <div class="custom_form-control col-md-6" data-err-message="Заполните поле">
+                <input class="placeholder_white datepicker-here" name="date" type="text" placeholder="ДД / ММ / ГГГГ" data-date-format="dd / mm / yyyy">
+              </div>
+              <button class="reservation_send btn_light" type="submit"> Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade custom-modal add-modal" id="addModal" tabindex="-1" role="dialog">
+      <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="icon icon-icomoon-12"></i></button>
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="custom-modal_wrapper reservation_wrap">
+            <h3>Товар добавлен в корзину</h3>
+          </div>
+          <div class="add-modal-item"></div>
+          <div class="add-modal-buttons">
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <button class="btn_light" data-dismiss="modal" aria-label="Close">Продолжить покупки</button>
+              </div>
+              <div class="col-12 col-sm-6"><a class="btn_full" href="/basket/">Перейти в корзину</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade custom-modal custom-modal--newsletter" id="okModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="icon icon-icomoon-12"></i></button>
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="custom-modal_wrapper reservation_wrap">
+            <h3>Сообщение отправлено<span> Ваше сообщение отправлено. С Вами свяжутся в ближайшее время.</span></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade custom-modal custom-modal--basket_banner" id="basket_bannerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="custom-modal_wrapper reservation_wrap">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="icon icon-icomoon-12"></i></button><img src="http://bocconcino.ru/bitrix/templates/bocconcino/img/basket_banners/1.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="http://bocconcino.ru/bitrix/templates/bocconcino/js/popper.min.js"></script>
+    <script src="http://bocconcino.ru/bitrix/templates/bocconcino/js/bootstrap.min.js"></script>
+    <script src="http://bocconcino.ru/bitrix/templates/bocconcino/js/jquery.mask.min.js"></script>
+    <script src="http://bocconcino.ru/bitrix/templates/bocconcino/js/jquery.maskedinput.min.js"></script>
+    <script src="http://bocconcino.ru/bitrix/templates/bocconcino/js/jquery.easing.1.3.js"></script>
+    <script src="http://bocconcino.ru/bitrix/templates/bocconcino/js/jquery.sticky.js"></script>
+    <script src="http://bocconcino.ru/bitrix/templates/bocconcino/js/jquery.skitter.js"></script>
+    <script src="http://bocconcino.ru/bitrix/templates/bocconcino/js/slick.min.js"></script>
+    <script src="http://bocconcino.ru/bitrix/templates/bocconcino/js/bootstrap-select.min.js"></script>
+    <script src="http://bocconcino.ru/bitrix/templates/bocconcino/js/shuffle.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2c73c216-0bb0-461a-8d7a-4a1d6269def1" type="text/javascript"></script>
+    <script src="http://bocconcino.ru/bitrix/templates/bocconcino/js/easyzoom.js"></script>
+    <script src="http://bocconcino.ru/bitrix/templates/bocconcino/js/fancybox/jquery.fancybox.min.js"></script>
+    <script src="http://bocconcino.ru/bitrix/templates/bocconcino/js/jquery.matchHeight.js"></script>
+    <script type="text/javascript" src="http://bocconcino.ru/bitrix/templates/bocconcino/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="http://bocconcino.ru/bitrix/templates/bocconcino/locales/bootstrap-datepicker.ru.min.js"></script>
+    <script src="http://bocconcino.ru/bitrix/templates/bocconcino/js/main.js"></script>
+    <!-- BEGIN JIVOSITE CODE {literal}-->
+    <!--script(data-skip-moving='true' type='text/javascript').-->
+    <!--	(function () {-->
+    <!--		var widget_id = 'vSAMVsrPcd';-->
+    <!--		var d = document;-->
+    <!--		var w = window;-->
+    <!--		function l() {-->
+    <!--			var s = document.createElement('script');-->
+    <!--			s.type = 'text/javascript';-->
+    <!--			s.async = true;-->
+    <!--			s.src = '//code.jivosite.com/script/widget/' + widget_id;-->
+    <!--			var ss = document.getElementsByTagName('script')[0];-->
+    <!--			ss.parentNode.insertBefore(s, ss);-->
+    <!--		}-->
+    <!--		if (d.readyState == 'complete') {-->
+    <!--			l();-->
+    <!--		} else {-->
+    <!--			if (w.attachEvent) {-->
+    <!--				w.attachEvent('onload', l);-->
+    <!--			} else {-->
+    <!--				w.addEventListener('load', l, false);-->
+    <!--			}-->
+    <!--		}-->
+    <!--	})();-->
+    <!-- {/literal} END JIVOSITE CODE-->
+    <!-- Yandex.Metrika counter-->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+      	m[i] = m[i] || function () {
+      		(m[i].a = m[i].a || []).push(arguments)
+      	};
+      	m[i].l = 1 * new Date();
+      	k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+      })
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+      ym(35160105, "init", {
+      	clickmap: true,
+      	trackLinks: true,
+      	accurateTrackBounce: true,
+      	webvisor: true,
+      	ecommerce: "dataLayer"
+      });
+    </script>
+    <script type="text/javascript">
+      function setCookie(name, value, days) {
+      	var date = new Date();
+      	date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      	var expires = "; expires=" + date.toGMTString();
+      	document.cookie = name + "=" + value + expires + ";path=/";
+      }
+      function getParam(p) {
+      	var match = RegExp('[?&]' + p + '=([^&]*)').exec(window.location.search);
+      	return match && decodeURIComponent(match[1].replace(/\\+/g, ' '));
+      }
+      var yclid = getParam('yclid');
+      if (yclid) {
+      	setCookie('yclid', yclid, 90);
+      }
+    </script>
+    <!-- Извлечение yclid и изменение скрытого поля-->
+    <script>
+      function readCookie(name) {
+      	var n = name + "=";
+      	var cookie = document.cookie.split(';');
+      	for (var i = 0; i < cookie.length; i++) {
+      		var c = cookie[i];
+      		while (c.charAt(0) == ' ') {
+      			c = c.substring(1, c.length);
+      		}
+      		if (c.indexOf(n) == 0) {
+      			return c.substring(n.length, c.length);
+      		}
+      	}
+      	return null;
+      }
+      window.onload = function () {
+      	document.getElementsByName("yclid_field").forEach(
+      			function yclid_field(element) {
+      				element.value = readCookie('yclid');
+      			}
+      	);
+      }
+    </script>
+    <noscript>
+      <div><img src="https://mc.yandex.ru/watch/35160105" style="position:absolute; left:-9999px;" alt=""></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter-->
+  </body>
+</html>

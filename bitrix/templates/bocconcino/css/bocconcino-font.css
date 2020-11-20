@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "bocconcino";
+  src:url("../fonts/bocconcino.eot");
+  src:url("../fonts/bocconcino.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/bocconcino.woff") format("woff"),
+    url("../fonts/bocconcino.ttf") format("truetype"),
+    url("../fonts/bocconcino.svg#bocconcino") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "bocconcino" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "bocconcino" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icomoon:before {
+  content: "\61";
+}
+.icon-icomoon-1:before {
+  content: "\62";
+}
+.icon-icomoon-2:before {
+  content: "\63";
+}
+.icon-icomoon-3:before {
+  content: "\64";
+}
+.icon-icomoon-4:before {
+  content: "\65";
+}
+.icon-icomoon-5:before {
+  content: "\66";
+}
+.icon-icomoon-6:before {
+  content: "\67";
+}
+.icon-icomoon-7:before {
+  content: "\68";
+}
+.icon-icomoon-8:before {
+  content: "\69";
+}
+.icon-icomoon-9:before {
+  content: "\6a";
+}
+.icon-icomoon-10:before {
+  content: "\6b";
+}
+.icon-icomoon-11:before {
+  content: "\6c";
+}
+.icon-icomoon-12:before {
+  content: "\6d";
+}
+.icon-icomoon-13:before {
+  content: "\6e";
+}
+.icon-icomoon-14:before {
+  content: "\6f";
+}
+.icon-icomoon-15:before {
+  content: "\70";
+}
+.icon-icomoon-16:before {
+  content: "\71";
+}
+.icon-icomoon-17:before {
+  content: "\72";
+}
+.icon-icomoon-18:before {
+  content: "\73";
+}
+.icon-icomoon-19:before {
+  content: "\74";
+}
+.icon-icomoon-20:before {
+  content: "\75";
+}
+.icon-icomoon-21:before {
+  content: "\76";
+}
+.icon-icomoon-22:before {
+  content: "\77";
+}
+.icon-icomoon-23:before {
+  content: "\78";
+}
+.icon-icomoon-24:before {
+  content: "\79";
+}
